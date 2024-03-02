@@ -26,7 +26,7 @@ const MainTabScreen = () => (
         tabBarIcon: ({ color, size, focused }) => (
           <Image 
             source={require('./assets/Home.svg')}
-            style={{width: size, height: size, tintColor: focused ? 'green' : color}}
+            style={{width: size, height: size, tintColor: focused ? '#00A136' : color}}
           />
         ),
         headerShown: false,
@@ -39,7 +39,7 @@ const MainTabScreen = () => (
         tabBarIcon: ({ color, size, focused }) => (
           <Image 
             source={require('./assets/Adicionar.svg')}
-            style={{width: size, height: size, tintColor: focused ? 'green' : color}}
+            style={{width: size, height: size, tintColor: focused ? '#00A136' : color}}
           />
         ),
         headerShown: false,
@@ -52,7 +52,7 @@ const MainTabScreen = () => (
         tabBarIcon: ({ color, size, focused }) => (
           <Image 
             source={require('./assets/Histórico.svg')}
-            style={{width: size, height: size, tintColor: focused ? 'green' : color}}
+            style={{width: size, height: size, tintColor: focused ? '#00A136' : color}}
           />
         ),
         headerShown: false,
