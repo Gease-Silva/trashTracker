@@ -4,7 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Image } from 'react-native';
 import Home from './src/pages/Home/index';
-import Teste from './src/pages/Teste/index';
+import AddPoint from './src/pages/AddPoint/index';
+import Historic from './src/pages/Historic';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -32,8 +33,8 @@ const MainTabScreen = () => (
       }}
     />
     <Tab.Screen
-      name="Teste"
-      component={Teste}
+      name="Adicionar"
+      component={AddPoint}
       options={{
         tabBarIcon: ({ color, size, focused }) => (
           <Image 
@@ -45,12 +46,12 @@ const MainTabScreen = () => (
       }}
     />
     <Tab.Screen
-      name="Teste"
-      component={Teste}
+      name="Histórico"
+      component={Historic}
       options={{
         tabBarIcon: ({ color, size, focused }) => (
           <Image 
-            source={require('./assets/Adicionar.svg')}
+            source={require('./assets/Histórico.svg')}
             style={{width: size, height: size, tintColor: focused ? 'green' : color}}
           />
         ),
@@ -75,8 +76,13 @@ const App = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen 
-          name="Teste" 
-          component={Teste} 
+          name="Adicionar" 
+          component={AddPoint}  
+          options={{headerShown: false}}
+        />
+        <Stack.Screen 
+          name="Histórico" 
+          component={Historic}  
           options={{headerShown: false}}
         />
       </Stack.Navigator>
