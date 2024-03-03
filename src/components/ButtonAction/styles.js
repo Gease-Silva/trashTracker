@@ -1,12 +1,11 @@
 import { StyleSheet } from "react-native";
 
-export default StyleSheet.create({
+const styles = StyleSheet.create({
     filled:{
         withIcon:{
             flexDirection: "row",
             borderRadius: 100,
-            flex: 1,
-            widht: "100%",
+            overflow: 'hidden',
             gap: 8,
             paddingVertical: 10,
             paddingHorizontal: 16,
@@ -16,9 +15,8 @@ export default StyleSheet.create({
         withoutIcon:{
             flexDirection: "row",
             borderRadius: 100,
-            flex: 1,
+            overflow: 'hidden',
             gap: 8,
-            widht: "100%",
             paddingVertical: 10,
             paddingHorizontal: 24,
             justifyContent: "center",
@@ -26,3 +24,5 @@ export default StyleSheet.create({
         }
     },
 });
+
+export default styles;

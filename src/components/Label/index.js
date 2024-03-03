@@ -14,30 +14,30 @@ export default function Label({
         case "display":
             style = size === "large" ? styles.display.large :
                 size === "medium" ? styles.display.medium :
-                    style = styles.display.small;
+                    styles.display.small;
             break;
         case "headline":
             style = size === "large" ? styles.headline.large :
                 size === "medium" ? styles.headline.medium :
-                    style = styles.headline.small;
+                    styles.headline.small;
             break;
         case "title":
             style = size === "large" ? styles.title.large :
                 size === "medium" ? styles.title.medium :
-                    style = styles.title.small;
+                    styles.title.small;
             break;
         case "label":
             style = size === "large" ? styles.label.large :
                 size === "medium" ? styles.label.medium :
-                    style = styles.label.small;
+                    styles.label.small;
             break;
         case "body":
             style = size === "large" ? styles.body.large :
                 size === "medium" ? styles.body.medium :
-                    style = styles.body.small;
+                    styles.body.small;
             break;
     }
-    const selected = { style, color: color, fontWeight };
+    const selected = { ...style, color: color, fontWeight };
 
     return (
         <Text style={selected}>

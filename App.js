@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 
 const MainTabScreen = () => (
   <Tab.Navigator
-    tabBarOptions={{
+    screenOptions={{
       headerShown: false,
       activeTintColor: 'blue',
       inactiveTintColor: 'gray',
@@ -76,12 +76,12 @@ const App = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen 
-          name="Adicionar" 
+          name="AddPoint" 
           component={AddPoint}  
           options={{headerShown: false}}
         />
         <Stack.Screen 
-          name="Histórico" 
+          name="Historic" 
           component={Historic}  
           options={{headerShown: false}}
         />

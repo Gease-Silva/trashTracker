@@ -3,6 +3,7 @@ import { FlatList, SafeAreaView, ScrollView, View } from "react-native";
 import ListItem from "../../components/ListItem";
 import ButtonAction from "../../components/ButtonAction";
 import styles from "./styles";
+import TextField from "../../components/TextField";
 
 export default function Home({navigation}) {
     const data = [
@@ -13,13 +14,13 @@ export default function Home({navigation}) {
         { id: 5, trashType: "Metal", address: "Rua 5", collectStatus: true, collectDate: "2024-02-27" },
     ];
 
-    function nav(){
-        navigation.navigate('Teste');
+    function openAddPoint() {
+        navigation.navigate("AddPoint");
     }
 
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView>
+        <SafeAreaView style={styles.container}
+        contentInset={{ top: 44 }} >
                 <FlatList
                     data={data}
                     renderItem={({ item }) => (
@@ -32,9 +33,14 @@ export default function Home({navigation}) {
                     )}
                     keyExtractor={item => item.id.toString()}
                 />
-            </ScrollView>
-            <View>
-                <ButtonAction type={"filled"} text={"Teste"} action={nav} />
+            <View style={{width: '100%', marginHorizontal: 10, marginVertical: 10}}>
+                <ButtonAction type={"filled"} text={"Teste"} action={openAddPoint}/>
+            </View>
+            <View style={{width: '100%', marginHorizontal: 10, marginVertical: 10}}>
+                <TextField
+                    placeholderText={"E-mail"}
+                    keyboardType={"email-address"}
+                />
             </View>
         </SafeAreaView>
     );

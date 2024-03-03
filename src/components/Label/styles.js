@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export default StyleSheet.create({
+const styles =  StyleSheet.create({
     display:{
         large: {
             fontSize: 57
@@ -57,3 +57,5 @@ export default StyleSheet.create({
         }
     }
 });
+
+export default styles;
